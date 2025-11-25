@@ -1,5 +1,5 @@
 import SwiftUI
-
+import ComposeApp
 
 extension ArticlesScreen {
 
