@@ -2,7 +2,8 @@ package com.example.dailypulse
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.CoroutineScope
 
-actual open class BaseViewModel {
-    actual val scope = viewModelScope
+actual open class BaseViewModel : ViewModel() {
+    actual open val scope: CoroutineScope = viewModelScope
 }
