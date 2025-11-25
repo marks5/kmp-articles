@@ -30,6 +30,7 @@ kotlin {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
             implementation(libs.androidx.lifecycle.viewmodel.ktx)
+            implementation(libs.androidx.navigation.compose)
         }
         iosMain.dependencies {
 
@@ -81,5 +82,6 @@ android {
 dependencies {
     debugImplementation(compose.uiTooling)
     implementation(libs.coil.compose)
+    implementation(libs.androidx.navigation.compose)
 }
 
