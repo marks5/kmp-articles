@@ -19,7 +19,7 @@ material3 = "1.4.0"
 material = "1.9.5"
 navigationCompose = "2.7.5"
 ktorClient = "2.3.5"
-kotlinxDatetime = "0.4.1"
+kotlinxDatetime = "0.7.1"
 
 [libraries]
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
