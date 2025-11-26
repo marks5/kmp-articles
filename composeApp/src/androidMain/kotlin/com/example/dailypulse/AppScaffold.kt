@@ -15,9 +15,7 @@ import com.example.dailypulse.screens.ArticlesScreen
 import com.example.dailypulse.screens.Screens
 
 @Composable
-fun AppScaffold(
-    articlesViewModel: ArticlesViewModel
-) {
+fun AppScaffold() {
 
     val navController = rememberNavController()
 
@@ -25,7 +23,6 @@ fun AppScaffold(
         AppNavHost(
             navController = navController,
             modifier = Modifier.fillMaxSize().padding(it),
-            articlesViewModel
         )
     }
 }
@@ -33,8 +30,7 @@ fun AppScaffold(
 @Composable
 fun AppNavHost(
     navController: NavHostController,
-    modifier: Modifier = Modifier,
-    articlesViewModel: ArticlesViewModel
+    modifier: Modifier = Modifier
 ){
     NavHost(
         navController = navController,
@@ -45,7 +41,6 @@ fun AppNavHost(
             ArticlesScreen(
                 onAboutButtonClick = {
                     navController.navigate(Screens.ABOUT_DEVICE.route) },
-                articlesViewModel = articlesViewModel
             )
         }
 
