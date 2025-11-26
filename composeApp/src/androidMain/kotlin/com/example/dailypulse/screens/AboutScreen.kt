@@ -16,6 +16,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.core.R
+import androidx.core.graphics.drawable.IconCompat
 import com.example.dailypulse.Platform
 
 @Composable
@@ -36,10 +38,7 @@ private fun Toolbar(
     TopAppBar(title = { Text("About Device") },
         navigationIcon = {
             IconButton(onClick = onBackButtonClick) {
-                Icon (
-                    imageVector = Icons.Default.ArrowBack,
-                    contentDescription = "Back Button"
-                )
+                Text("click")
             }
         }
     )

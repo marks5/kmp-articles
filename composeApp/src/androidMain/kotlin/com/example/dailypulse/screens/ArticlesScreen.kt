@@ -26,6 +26,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.R
 import coil.compose.AsyncImage
 import com.example.dailypulse.articles.Article
 import com.example.dailypulse.articles.ArticlesViewModel
@@ -57,10 +58,7 @@ private fun AppBar(
     TopAppBar(title = { Text("Articles") },
         actions = {
             IconButton(onClick = onAboutButtonClick) {
-                Icon(
-                    imageVector = Icons.Outlined.Info,
-                    contentDescription = "About Device Button"
-                )
+                Text("click")
             }
         }
     )

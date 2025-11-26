@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
+    kotlin("plugin.serialization") version "1.9.20"
 }
 
 kotlin {
@@ -31,9 +32,10 @@ kotlin {
             implementation(libs.androidx.activity.compose)
             implementation(libs.androidx.lifecycle.viewmodel.ktx)
             implementation(libs.androidx.navigation.compose)
+            implementation(libs.ktor.client.android)
         }
         iosMain.dependencies {
-
+            implementation(libs.ktor.client.darwin)
         }
         commonMain.dependencies {
             implementation(libs.kotlinx.coroutines.core)
@@ -45,6 +47,10 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
+
+            implementation(libs.ktor.client.core)
+            implementation(libs.ktor.client.content.negotiation)
+            implementation(libs.ktor.serialization.kotlinx.json)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
